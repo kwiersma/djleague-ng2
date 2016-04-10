@@ -1,4 +1,4 @@
 import {bootstrap} from 'angular2/platform/browser';
-import {DjleagueNg2App} from './app/djleague-ng2';
+import {AppComponent} from './app/AppComponent';
 
-bootstrap(DjleagueNg2App, []);
+bootstrap(AppComponent, []);

@@ -1,11 +1,16 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>DjleagueNg2</title>
   <base href="/">
-  {{content-for 'head'}}
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghetto League</title>
+
+  <link rel="stylesheet"
+        href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
   
   <!-- Service worker support is disabled by default.
        Install the worker script and uncomment to enable.
@@ -19,8 +24,49 @@
   </script>
   -->
 </head>
-<body>
-  <djleague-ng2-app>Loading...</djleague-ng2-app>
+<body style="padding-top: 70px; margin-bottom: 100px;">
+
+  <header class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <span class="navbar-brand">Ghetto League Draft</span>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#/players">Players</a></li>
+          <li><a href="#/teams">Teams</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <djleague-ng2-app>Loading...</djleague-ng2-app>
+    <br /><br />
+  </main>
+
+  <footer>
+    <div class="navbar navbar-fixed-bottom">
+      <div class="navbar-inner footer">
+        <div class="container">
+          <footer>
+            <div class="row">
+              <div class="col-md-12">
+                Created by <a href="http://twitter.com/kwiersma" target="_blank">Kurt Wiersma</a>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 
   <script src="vendor/es6-shim/es6-shim.js"></script>
   <script src="vendor/systemjs/dist/system-polyfills.js"></script>
