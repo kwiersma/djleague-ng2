@@ -4,18 +4,19 @@ import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router'
 import {CliRouteConfig} from './route-config';
 import {DraftComponent} from "./draft/DraftComponent";
 import {FantasyTeamService} from "./shared/services/FantasyTeamService";
-import {FantasyTeamsComponent} from "./fantasyteams";
+import {FantasyTeamsComponent} from "./fantasyteams/FantasyTeamsComponent";
+import {LogService} from "./shared/services/LogService";
 
 @Component({
   selector: 'app-component',
-  providers: [ROUTER_PROVIDERS, HTTP_PROVIDERS, FantasyTeamService],
+  providers: [ROUTER_PROVIDERS, HTTP_PROVIDERS, FantasyTeamService, LogService],
   templateUrl: 'app/app.component.html',
   directives: [ROUTER_DIRECTIVES],
   pipes: []
 })
 @RouteConfig([
   { path: '/', as: 'Draft', component: DraftComponent, useAsDefault: true },
-  { path: '/teams', as: 'Teams', component: FantasyTeamsComponent },
+  { path: '/teams', as: 'Teams', component: FantasyTeamsComponent }
 ].concat(CliRouteConfig))
 
 export class AppComponent {
