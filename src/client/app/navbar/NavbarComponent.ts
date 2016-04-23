@@ -10,6 +10,10 @@ export class NavbarComponent {
     constructor(private location: Location) {}
 
     highlight(path: string) {
-        return this.location.path() === path;
+        if (path === '/') {
+            path = '';
+        }
+        var currentPath:string = this.location.path();
+        return currentPath === path;
     }
 }

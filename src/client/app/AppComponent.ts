@@ -6,12 +6,13 @@ import {DraftComponent} from "./draft/DraftComponent";
 import {FantasyTeamService} from "./shared/services/FantasyTeamService";
 import {FantasyTeamsComponent} from "./fantasyteams/FantasyTeamsComponent";
 import {LogService} from "./shared/services/LogService";
+import {NavbarComponent} from "./navbar/NavbarComponent";
 
 @Component({
   selector: 'app-component',
   providers: [ROUTER_PROVIDERS, HTTP_PROVIDERS, FantasyTeamService, LogService],
   templateUrl: 'app/app.component.html',
-  directives: [ROUTER_DIRECTIVES],
+  directives: [ROUTER_DIRECTIVES, NavbarComponent],
   pipes: []
 })
 @RouteConfig([

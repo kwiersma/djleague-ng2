@@ -1,6 +1,6 @@
 import {Injectable} from 'angular2/core';
 import {Http, Response} from "angular2/http";
-import {Observable} from "rxjs/Observable";
+import {Observable} from "rxjs/Rx";
 import {FantasyTeam} from "../model/FantasyTeam";
 import {LogService} from "./LogService";
 
@@ -15,7 +15,7 @@ export class FantasyTeamService {
         if (this.teams === undefined) {
             this.teams = this.http.get("/teams.json")
                 .map((response: Response) => {
-                    return response.json();
+                    return <FantasyTeam[]> response.json();
                 })
                 .catch(this.handleError);
         }
