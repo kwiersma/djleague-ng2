@@ -2,7 +2,7 @@ export class FantasyTeam {
     id: number;
     name: string;
     owner: string;
-    draftOrder: number;
+    draftorder: number;
 
     constructor() {}
 }
