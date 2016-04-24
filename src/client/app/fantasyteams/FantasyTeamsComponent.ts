@@ -1,6 +1,6 @@
 import {Component, OnInit} from "angular2/core";
 import {FantasyTeamService} from "../shared/services/FantasyTeamService";
-import {FantasyTeam} from "../shared/model/FantasyTeam";
+import {FantasyTeam} from "../shared/model/model";
 
 @Component({
     selector: 'fantasyteams',

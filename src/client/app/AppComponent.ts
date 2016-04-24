@@ -7,10 +7,11 @@ import {FantasyTeamService} from "./shared/services/FantasyTeamService";
 import {FantasyTeamsComponent} from "./fantasyteams/FantasyTeamsComponent";
 import {LogService} from "./shared/services/LogService";
 import {NavbarComponent} from "./navbar/NavbarComponent";
+import {PlayerService} from "./shared/services/PlayerService";
 
 @Component({
   selector: 'app-component',
-  providers: [ROUTER_PROVIDERS, HTTP_PROVIDERS, FantasyTeamService, LogService],
+  providers: [ROUTER_PROVIDERS, HTTP_PROVIDERS, FantasyTeamService, PlayerService, LogService],
   templateUrl: 'app/app.component.html',
   directives: [ROUTER_DIRECTIVES, NavbarComponent],
   pipes: []

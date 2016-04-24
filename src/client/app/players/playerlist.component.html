@@ -1,0 +1,28 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Pos</th>
+        <th>Team</th>
+        <th>Bye</th>
+        <th>Rank</th>
+        <th>Points</th>
+        <th>Avg Pick</th>
+        <th>Round - Pick</th>
+        <th>Owner</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="#player of players">
+        <td><a href="{{ player.url }}" target="_blank">{{ player.lastname }}, {{ player.firstname }}</a></td>
+        <td>{{ player.position }}</td>
+        <td>{{ player.team }}</td>
+        <td>{{ player.byeweek }}</td>
+        <td>{{ player.rank }}</td>
+        <td>{{ player.points }}</td>
+        <td>{{ player.avgpick }}</td>
+        <td>{{ player.round }} - {{ player.pick }}</td>
+        <td>{{ player.owner }}</td>
+    </tr>
+    </tbody>
+</table>
