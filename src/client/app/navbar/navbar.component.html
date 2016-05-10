@@ -1,20 +1,21 @@
 <header class="navbar navbar-inverse navbar-fixed-top">
     <nav class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
             <span class="navbar-brand">Angular 2 Draft</span>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-
-                <li [class.active]="highlight('/')"><a [routerLink]="['Draft']">Players</a></li>
-                <li [class.active]="highlight('/teams')"><a [routerLink]="['Teams']">Teams</a></li>
-
+                <li [class.active]="highlight('/')">
+                    <a [routerLink]="['Draft']">Players</a>
+                </li>
+                <li [class.active]="highlight('/teams')">
+                    <a [routerLink]="['Teams']">Teams</a>
+                </li>
             </ul>
         </div>
     </nav>
