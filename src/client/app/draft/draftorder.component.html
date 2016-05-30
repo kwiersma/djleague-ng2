@@ -1,0 +1,13 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Draft Order</h3>
+    </div>
+    <div class="panel-body">
+        <ol>
+            <li *ngFor="#team of teams">
+                {{ team.name }}<br />
+                ({{ team.owner }})
+            </li>
+        </ol>
+    </div>
+</div>
