@@ -1,3 +1,5 @@
+<player-filter (changed)="filterChanged($event)"></player-filter>
+
 <table class="table table-striped">
     <thead>
     <tr>
@@ -13,7 +15,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="#player of players">
+    <tr *ngFor="#player of filteredPlayers">
         <td><a href="{{ player.url }}" target="_blank">{{ player.lastname }}, {{ player.firstname }}</a></td>
         <td>{{ player.position }}</td>
         <td>{{ player.team }}</td>
