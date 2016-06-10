@@ -21,7 +21,7 @@ export class PlayerListComponent implements OnInit {
             });
     }
 
-    filterChanged(lastname: string) {
+    playerFilterChanged(lastname: string) {
         if (lastname && this.players) {
             lastname = lastname.toLowerCase();
             var filtered = this.players.filter((player: Player) => {
