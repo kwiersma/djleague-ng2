@@ -10,6 +10,10 @@
 
 # IDEs and editors
 /.idea
+.project
+.classpath
+*.launch
+.settings/
 
 # misc
 /.sass-cache
@@ -24,5 +28,6 @@ testem.log
 /e2e/*.js
 /e2e/*.map
 
-*.iml
+#System Files
 .DS_Store
+Thumbs.db

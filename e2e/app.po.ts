@@ -4,6 +4,6 @@ export class DjleagueNg2Page {
   }
 
   getParagraphText() {
-    return element(by.css('djleague-ng2-app p')).getText();
+    return element(by.css('app-root h1')).getText();
   }
 }
