@@ -27,7 +27,7 @@ export class PlayerService {
             } else {
                 // create the request, store the `Observable` for subsequent subscribers
                 this.logService.log('requesting players.json');
-                this.playersObservable = this.http.get("/players.json")
+                this.playersObservable = this.http.get("/players.js")
                     .map((response:Response) => {
                         return <Player[]> response.json();
                     })
