@@ -25,8 +25,8 @@ export class FantasyTeamService {
                 return this.teamsObservable;
             } else {
                 // create the request, store the `Observable` for subsequent subscribers
-                this.logService.log('requesting teams.json');
-                this.teamsObservable = this.http.get("/teams.json")
+                this.logService.log('requesting teams.js');
+                this.teamsObservable = this.http.get("teams.js")
                     .map((response:Response) => {
                         return <FantasyTeam[]> response.json();
                     })
