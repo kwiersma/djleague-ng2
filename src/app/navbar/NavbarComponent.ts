@@ -3,8 +3,9 @@ import {Component} from "@angular/core";
 import {Location} from "@angular/common";
 
 @Component({
+    moduleId: module.id,
     selector: 'navbar',
-    templateUrl: 'app/navbar/navbar.component.html',
+    templateUrl: 'navbar.component.html',
     directives: [ROUTER_DIRECTIVES]
 })
 export class NavbarComponent {

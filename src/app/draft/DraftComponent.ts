@@ -6,8 +6,9 @@ import {FantasyTeam} from "../shared/model/model";
 import {FantasyTeamService} from "../shared/services/FantasyTeamService";
 
 @Component({
+    moduleId: module.id,
     selector: 'draft',
-    templateUrl: 'app/draft/draft.component.html',
+    templateUrl: 'draft.component.html',
     directives: [ROUTER_DIRECTIVES, PlayerListComponent, DraftOrderComponent]
 })
 export class DraftComponent implements OnInit {

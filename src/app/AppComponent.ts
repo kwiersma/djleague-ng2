@@ -8,9 +8,10 @@ import {NavbarComponent} from "./navbar/NavbarComponent";
 import {PlayerService} from "./shared/services/PlayerService";
 
 @Component({
+  moduleId: module.id,
   selector: 'app-component',
   providers: [HTTP_PROVIDERS, FantasyTeamService, PlayerService, LogService],
-  templateUrl: 'app/app.component.html',
+  templateUrl: 'app.component.html',
   directives: [ROUTER_DIRECTIVES, NavbarComponent],
   pipes: []
 })

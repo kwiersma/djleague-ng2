@@ -4,8 +4,9 @@ import {Player} from "../shared/model/model";
 import {PlayerFilterComponent} from "./PlayerFilterComponent";
 
 @Component({
+    moduleId: module.id,
     selector: 'player-list',
-    templateUrl: 'app/players/playerlist.component.html',
+    templateUrl: 'playerlist.component.html',
     directives: [PlayerFilterComponent]
 })
 export class PlayerListComponent implements OnInit {

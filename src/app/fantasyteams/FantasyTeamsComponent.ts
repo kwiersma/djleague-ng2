@@ -3,8 +3,9 @@ import {FantasyTeamService} from "../shared/services/FantasyTeamService";
 import {FantasyTeam} from "../shared/model/model";
 
 @Component({
+    moduleId: module.id,
     selector: 'fantasyteams',
-    templateUrl: 'app/fantasyteams/fantasyteams.component.html'
+    templateUrl: 'fantasyteams.component.html'
 })
 export class FantasyTeamsComponent implements OnInit {
     teams: FantasyTeam[];
