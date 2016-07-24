@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 export interface ILogService {
     log(message: string): void;
-    debug(message: string, extra?:any):void;
+    debug(message: string, extra?: any): void;
 }
 
 @Injectable()
@@ -14,7 +14,7 @@ export class LogService implements ILogService {
         console.log(message);
     }
 
-    debug(message: string, extra?:any) {
+    debug(message: string, extra?: any) {
         console.debug(message, extra);
     }
 

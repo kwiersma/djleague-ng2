@@ -1,7 +1,7 @@
-import {Component, OnInit} from "@angular/core";
-import {PlayerService} from "../shared/services/PlayerService";
-import {Player} from "../shared/model/model";
-import {PlayerFilterComponent} from "./PlayerFilterComponent";
+import {Component, OnInit} from '@angular/core';
+import {PlayerService} from '../shared/services/PlayerService';
+import {Player} from '../shared/model/model';
+import {PlayerFilterComponent} from './PlayerFilterComponent';
 
 @Component({
     moduleId: module.id,
@@ -25,10 +25,10 @@ export class PlayerListComponent implements OnInit {
     playerFilterChanged(lastname: string) {
         if (lastname && this.players) {
             lastname = lastname.toLowerCase();
-            var filtered = this.players.filter((player: Player) => {
-                var match = false;
-                var regExp = new RegExp("^" + lastname, "i");
-                if (player.lastname.search(regExp) != -1) {
+            let filtered = this.players.filter((player: Player) => {
+                let match = false;
+                let regExp = new RegExp('^' + lastname, 'i');
+                if (player.lastname.search(regExp) !== -1) {
                     match = true;
                 }
                 return match;

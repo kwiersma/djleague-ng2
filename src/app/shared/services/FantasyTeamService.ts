@@ -1,15 +1,15 @@
 import {Injectable} from '@angular/core';
-import {Http, Response} from "@angular/http";
-import {Observable} from "rxjs/Rx";
-import {LogService} from "./LogService";
-import {FantasyTeam} from "../model/model";
+import {Http, Response} from '@angular/http';
+import {Observable} from 'rxjs/Rx';
+import {LogService} from './LogService';
+import {FantasyTeam} from '../model/model';
 
 @Injectable()
 export class FantasyTeamService {
     private teamsObservable: Observable<FantasyTeam[]>;
-    private teamsData:FantasyTeam[];
+    private teamsData: FantasyTeam[];
 
-    constructor(private http: Http, private logService: LogService) {}
+    constructor(private http: Http, private logService: LogService) { }
 
     getFantasyTeams(): Observable<FantasyTeam[]> {
         // http://stackoverflow.com/questions/36271899/what-is-the-correct-way-to-share-the-result-of-an-angular-2-http-network-call-in
@@ -19,15 +19,15 @@ export class FantasyTeamService {
             this.logService.log('teams.json loaded from cache');
             return Observable.of(this.teamsData);
         } else {
-            if(this.teamsObservable) {
+            if (this.teamsObservable) {
                 // if `this.observable` is set then the request is in progress
                 // return the `Observable` for the ongoing request
                 return this.teamsObservable;
             } else {
                 // create the request, store the `Observable` for subsequent subscribers
                 this.logService.log('requesting teams.js');
-                this.teamsObservable = this.http.get("teams.js")
-                    .map((response:Response) => {
+                this.teamsObservable = this.http.get('teams.js')
+                    .map((response: Response) => {
                         return <FantasyTeam[]> response.json();
                     })
                     .do((val) => {

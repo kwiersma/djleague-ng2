@@ -1,4 +1,4 @@
-import {Component, Output, EventEmitter} from "@angular/core";
+import {Component, Output, EventEmitter} from '@angular/core';
 
 @Component({
     moduleId: module.id,
@@ -16,7 +16,7 @@ export class PlayerFilterComponent {
 
     filterChanged(event: any) {
         event.preventDefault();
-        this.changed.emit(this.model.lastname); //Raise changed event
+        this.changed.emit(this.model.lastname); // Raise changed event
     }
 
 }

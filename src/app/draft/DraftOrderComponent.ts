@@ -1,5 +1,5 @@
-import {Component, Input} from "@angular/core";
-import {FantasyTeam} from "../shared/model/model";
+import {Component, Input} from '@angular/core';
+import {FantasyTeam} from '../shared/model/model';
 
 @Component({
     moduleId: module.id,

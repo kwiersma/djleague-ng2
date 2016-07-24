@@ -1,6 +1,6 @@
-import {Component, OnInit} from "@angular/core";
-import {FantasyTeamService} from "../shared/services/FantasyTeamService";
-import {FantasyTeam} from "../shared/model/model";
+import {Component, OnInit} from '@angular/core';
+import {FantasyTeamService} from '../shared/services/FantasyTeamService';
+import {FantasyTeam} from '../shared/model/model';
 
 @Component({
     moduleId: module.id,

@@ -1,6 +1,6 @@
 import {ROUTER_DIRECTIVES} from '@angular/router';
-import {Component} from "@angular/core";
-import {Location} from "@angular/common";
+import {Component} from '@angular/core';
+import {Location} from '@angular/common';
 
 @Component({
     moduleId: module.id,
@@ -15,7 +15,7 @@ export class NavbarComponent {
         if (path === '/') {
             path = '';
         }
-        var currentPath:string = this.location.path();
+        let currentPath: string = this.location.path();
         return currentPath === path;
     }
 }

@@ -1,14 +1,14 @@
 import {Injectable} from '@angular/core';
-import {Http, Response} from "@angular/http";
-import {Observable} from "rxjs/Rx";
-import {LogService} from "./LogService";
-import {Player} from "../model/model";
+import {Http, Response} from '@angular/http';
+import {Observable} from 'rxjs/Rx';
+import {LogService} from './LogService';
+import {Player} from '../model/model';
 
 
 @Injectable()
 export class PlayerService {
     private playersObservable: Observable<Player[]>;
-    private playersData:Player[];
+    private playersData: Player[];
 
     constructor(private http: Http, private logService: LogService) {}
 
@@ -20,15 +20,15 @@ export class PlayerService {
             this.logService.log('teams.json loaded from cache');
             return Observable.of(this.playersData);
         } else {
-            if(this.playersObservable) {
+            if (this.playersObservable) {
                 // if `this.observable` is set then the request is in progress
                 // return the `Observable` for the ongoing request
                 return this.playersObservable;
             } else {
                 // create the request, store the `Observable` for subsequent subscribers
                 this.logService.log('requesting players.json');
-                this.playersObservable = this.http.get("players.js")
-                    .map((response:Response) => {
+                this.playersObservable = this.http.get('players.js')
+                    .map((response: Response) => {
                         return <Player[]> response.json();
                     })
                     .do((val) => {
