@@ -1,7 +1,6 @@
 import {Component, Output, EventEmitter} from '@angular/core';
 
 @Component({
-    moduleId: module.id,
     selector: 'player-filter',
     templateUrl: 'playerfilter.component.html'
 })

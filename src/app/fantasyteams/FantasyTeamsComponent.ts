@@ -3,7 +3,6 @@ import {FantasyTeamService} from '../shared/services/FantasyTeamService';
 import {FantasyTeam} from '../shared/model/model';
 
 @Component({
-    moduleId: module.id,
     selector: 'fantasyteams',
     templateUrl: 'fantasyteams.component.html'
 })

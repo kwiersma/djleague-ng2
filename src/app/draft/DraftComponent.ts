@@ -1,15 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {ROUTER_DIRECTIVES} from '@angular/router';
-import {PlayerListComponent} from '../players/PlayerListComponent';
-import {DraftOrderComponent} from './DraftOrderComponent';
 import {FantasyTeam} from '../shared/model/model';
 import {FantasyTeamService} from '../shared/services/FantasyTeamService';
 
 @Component({
-    moduleId: module.id,
     selector: 'draft',
-    templateUrl: 'draft.component.html',
-    directives: [ROUTER_DIRECTIVES, PlayerListComponent, DraftOrderComponent]
+    templateUrl: 'draft.component.html'
 })
 export class DraftComponent implements OnInit {
 

@@ -10,11 +10,11 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li [class.active]="highlight('/')">
-                    <a [routerLink]="['/']">Players</a>
+                <li>
+                    <a [routerLink]="['/']" routerLinkActive="active">Players</a>
                 </li>
-                <li [class.active]="highlight('/teams')">
-                    <a [routerLink]="['/teams']">Teams</a>
+                <li>
+                    <a [routerLink]="['/teams']" routerLinkActive="active">Teams</a>
                 </li>
             </ul>
         </div>

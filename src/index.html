@@ -13,10 +13,6 @@
         crossorigin="anonymous">-->
   <link rel="stylesheet" href="styles/bootstrap.min.css">
 
-  {{#unless environment.production}}
-  <script src="/ember-cli-live-reload.js" type="text/javascript"></script>
-  {{/unless}}
-
 </head>
 
 <body style="padding-top: 70px; margin-bottom: 100px;">
@@ -36,15 +32,6 @@
      <!-- </div>
     </div>-->
     </footer>
-
-    {{#each scripts.polyfills}}
-    <script src="{{.}}"></script>
-    {{/each}}
-    <script>
-        System.import('system-config.js').then(function () {
-            System.import('main');
-        }).catch(console.error.bind(console));
-    </script>
 
 </body>
 </html>

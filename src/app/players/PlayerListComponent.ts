@@ -1,13 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {PlayerService} from '../shared/services/PlayerService';
 import {Player} from '../shared/model/model';
-import {PlayerFilterComponent} from './PlayerFilterComponent';
 
 @Component({
-    moduleId: module.id,
     selector: 'player-list',
     templateUrl: 'playerlist.component.html',
-    directives: [PlayerFilterComponent]
 })
 export class PlayerListComponent implements OnInit {
     players: Player[];

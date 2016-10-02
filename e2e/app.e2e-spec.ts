@@ -1,10 +1,10 @@
-import { DjleagueNg2Page } from './app.po';
+import { MigrationProjectPage } from './app.po';
 
-describe('djleague-ng2 App', function() {
-  let page: DjleagueNg2Page;
+describe('migration-project App', function() {
+  let page: MigrationProjectPage;
 
   beforeEach(() => {
-    page = new DjleagueNg2Page();
+    page = new MigrationProjectPage();
   });
 
   it('should display message saying app works', () => {
