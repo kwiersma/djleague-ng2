@@ -1,10 +1,10 @@
-import { MigrationProjectPage } from './app.po';
+import { DjleagueNg2Home } from './app.po';
 
-describe('migration-project App', function() {
-  let page: MigrationProjectPage;
+describe('ng-new App', () => {
+  let page: DjleagueNg2Home;
 
   beforeEach(() => {
-    page = new MigrationProjectPage();
+    page = new DjleagueNg2Home();
   });
 
   it('should display message saying app works', () => {

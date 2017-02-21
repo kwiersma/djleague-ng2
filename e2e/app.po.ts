@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class MigrationProjectPage {
+export class DjleagueNg2Home {
   navigateTo() {
     return browser.get('/');
   }
