@@ -6,7 +6,7 @@ export class FantasyTeam {
     draftorder: number;
 
     constructor() {
-                
+
     }
 }
 

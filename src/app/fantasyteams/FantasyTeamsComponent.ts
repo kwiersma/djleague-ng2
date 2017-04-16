@@ -8,7 +8,7 @@ import {FantasyTeam} from '../shared/model/model';
 })
 export class FantasyTeamsComponent implements OnInit {
     teams: FantasyTeam[];
-    
+
     constructor(private fantasyTeamService: FantasyTeamService) {}
 
     ngOnInit() {
