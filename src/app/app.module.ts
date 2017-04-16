@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {CommonModule, LocationStrategy} from "@angular/common";
-import {RouterModule, Router} from "@angular/router";
+import { CommonModule } from "@angular/common";
+import { RouterModule } from "@angular/router";
 
 import {LogService} from "./shared/services/LogService";
 import {FantasyTeamService} from "./shared/services/FantasyTeamService";
