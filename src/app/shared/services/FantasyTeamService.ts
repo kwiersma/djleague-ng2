@@ -8,6 +8,7 @@ import {FantasyTeam} from '../model/model';
 export class FantasyTeamService {
     private teamsObservable: Observable<FantasyTeam[]>;
     private teamsData: FantasyTeam[];
+    private teamsUrl = '/api2/teams'; // 'teams.js';
 
     constructor(private http: Http, private logService: LogService) { }
 
@@ -26,7 +27,7 @@ export class FantasyTeamService {
             } else {
                 // create the request, store the `Observable` for subsequent subscribers
                 this.logService.log('requesting teams.js');
-                this.teamsObservable = this.http.get('teams.js')
+                this.teamsObservable = this.http.get(this.teamsUrl)
                     .map((response: Response) => {
                         return <FantasyTeam[]> response.json();
                     })

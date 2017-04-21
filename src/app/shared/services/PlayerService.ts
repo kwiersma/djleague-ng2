@@ -9,12 +9,14 @@ import {Player} from '../model/model';
 export class PlayerService {
     private playersObservable: Observable<Player[]>;
     private playersData: Player[];
+    private playersUrl = '/api2/players'; // 'players.js';
 
     constructor(private http: Http, private logService: LogService) {}
 
     getPlayers(): Observable<Player[]> {
         // http://stackoverflow.com/questions/36271899/what-is-the-correct-way-to-share-the-result-of-an-angular-2-http-network-call-in
         // http://stackoverflow.com/questions/34104277/caching-results-with-angular2-http-service
+        // TODO better caching: http://www.syntaxsuccess.com/viewarticle/caching-with-rxjs-observables-in-angular-2.0
         if (this.playersData) {
             // if `data` is available just return it as `Observable`
             this.logService.log('teams.json loaded from cache');
@@ -27,7 +29,7 @@ export class PlayerService {
             } else {
                 // create the request, store the `Observable` for subsequent subscribers
                 this.logService.log('requesting players.json');
-                this.playersObservable = this.http.get('players.js')
+                this.playersObservable = this.http.get(this.playersUrl)
                     .map((response: Response) => {
                         return <Player[]> response.json();
                     })
