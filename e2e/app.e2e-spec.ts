@@ -9,8 +9,6 @@ describe('ng-new App', () => {
 
   it('should display welcome message', done => {
     page.navigateTo();
-    page.getParagraphText()
-        .then(msg => expect(msg).toEqual('Welcome to app!!'))
-        .then(done, done.fail);
+    expect(page.getParagraphText()).toEqual('Welcome to app!!');
   });
 });
